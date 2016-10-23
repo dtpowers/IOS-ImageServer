@@ -1,0 +1,16 @@
+ToDo
+-Save photo
+-Save location data
+-Serve photo random photos
+-Delete photo after 24 hours
+-like photo
+-dislike photo
+-Serve only photos within x distance of user
+-User creation
+-Log in
+-User stats
+
+
+EXTRA
+-video support
+-remove photos with enough dislikes
