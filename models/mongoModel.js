@@ -4,7 +4,7 @@ var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 // Connect to the db
 var mongoDB;
-MongoClient.connect("mongodb://localhost:27017/vie", function(err, db) {
+MongoClient.connect("mongodb://localhost:27017/drop", function(err, db) {
   assert.equal(null, err);
   console.log("Connected to MongoDB");
   // assign db to global
