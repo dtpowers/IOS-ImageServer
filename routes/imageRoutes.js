@@ -1,6 +1,7 @@
 // include my model for this application
-var mongoModel = require("../models/mongoModel.js")
-
+var mongoModel = require("../models/mongoModel.js");
+var AWSModel = require("../models/awsModel.js");
+AWSModel.get_keys();
 // Define the routes for this controller
 exports.init = function(app) {
 
@@ -12,7 +13,7 @@ exports.init = function(app) {
 
   app.delete('/api/:collection', doDelete); //CRUD Delete
 
-  // The CRUD Delete path is left for you to define
+
 }
 
 /**

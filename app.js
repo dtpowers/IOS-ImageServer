@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+//initialize AWS connection
 
 // Load all routes in the routes directory
 fs.readdirSync('./routes').forEach(function(file) {
@@ -23,5 +24,5 @@ fs.readdirSync('./routes').forEach(function(file) {
 
 
 app.listen(3000, function() {
-  console.log('Ready to start helping people manage their time!');
+  console.log('THATS A SPICY MEATBALL');
 });

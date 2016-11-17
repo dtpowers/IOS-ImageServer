@@ -1,3 +1,21 @@
+var AWSKey = "";
+var AWSSecret = "";
+
+
+var get_keys = function() {
+  keyFile = fs.readFile('/secrets/accessKey.secret', function(err, data) {
+    AWSKey = data;
+    console.log("AWS Key is " + data);
+    secretsFile = fs.readFile('/secrets/secret.secret', function(err, data) {
+      AWSSecret = data;
+      console.log("Aws Secret is " + data);
+    });
+  });
+
+
+}
+
+
 var client = new Upload('droper', {
   aws: {
     path: 'images/',
