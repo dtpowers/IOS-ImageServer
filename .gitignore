@@ -2,3 +2,4 @@ node_modules
 
 #Access tokens
 /secrets/*
+*.secret
