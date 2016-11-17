@@ -1,18 +1,16 @@
 var AWSKey = "";
 var AWSSecret = "";
+var fs = require('fs');
 
-
-var get_keys = function() {
-  keyFile = fs.readFile('/secrets/accessKey.secret', function(err, data) {
+exports.get_keys = function() {
+  keyFile = fs.readFile('secrets/accessKey.secret', function(err, data) {
     AWSKey = data;
-    console.log("AWS Key is " + data);
-    secretsFile = fs.readFile('/secrets/secret.secret', function(err, data) {
+    //console.log("AWS Key is " + data);
+    secretsFile = fs.readFile('secrets/secret.secret', function(err, data) {
       AWSSecret = data;
-      console.log("Aws Secret is " + data);
+      //console.log("Aws Secret is " + data);
     });
   });
-
-
 }
 
 

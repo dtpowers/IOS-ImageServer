@@ -4,7 +4,6 @@ var AWSModel = require("../models/awsModel.js");
 AWSModel.get_keys();
 // Define the routes for this controller
 exports.init = function(app) {
-
   app.get('/api/:collection', doRetrieve); // CRUD Retrieve
 
   app.put('/api/:collection', doCreate); // CRUD Create
@@ -12,7 +11,6 @@ exports.init = function(app) {
   app.post('/api/:collection', doUpdate); // CRUD Update
 
   app.delete('/api/:collection', doDelete); //CRUD Delete
-
 
 }
 
