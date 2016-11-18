@@ -3,13 +3,14 @@
 
 var bucketName = 'droper';
 var bucketRegion = 'us-west-2';
-//var path = require('path');
+var path = require('path');
 
 
-//var fs = require('fs');
+var fs = require('fs');
 var AWS = require('aws-sdk');
 AWS.config.loadFromPath('secrets/config.json');
 console.log("AWS config succesful");
+//upload_test('pictures/fire.jpg');
 
 function upload_test(file) {
   // Create S3 service object
