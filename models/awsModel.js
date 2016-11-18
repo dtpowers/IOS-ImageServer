@@ -9,14 +9,16 @@ var path = require('path');
 var fs = require('fs');
 var AWS = require('aws-sdk');
 AWS.config.loadFromPath('secrets/config.json');
+// Create S3 service object
+var s3 = new AWS.S3({
+  apiVersion: '2006-03-01'
+});
 console.log("AWS config succesful");
+
 //upload_test('pictures/fire.jpg');
 
 function upload_test(file) {
-  // Create S3 service object
-  s3 = new AWS.S3({
-    apiVersion: '2006-03-01'
-  });
+
 
   // call S3 to retrieve upload file to specified bucket
   var uploadParams = {
@@ -42,7 +44,26 @@ function upload_test(file) {
   });
 
 
+}
 
+//download_test("fire.jpg");
+
+function download_test(imageName) {
+
+  s3.getObject({
+      Bucket: bucketName,
+      Key: imageName
+    },
+    function(error, data) {
+      if (error != null) {
+        console.log("Failed to retrieve an object: " + error);
+      } else {
+        console.log("Loaded " + data.ContentLength + " bytes");
+        // File is loaded into data,
+        //can be written to disk or passed straight to user.
+      }
+    }
+  );
 }
 
 
