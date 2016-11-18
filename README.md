@@ -1,2 +1,13 @@
-# IOS-ImageServer
-A repo to explore image processing/storage for a currently unnamed IOS app in development
+# Droplight API
+
+This node server fuctions as the API for the IOS application Droplight. 
+
+
+SETUP
+git clone
+npm install
+store AWS credientials in secrets/config.json
+
+
+
+

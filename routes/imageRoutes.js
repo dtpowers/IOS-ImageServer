@@ -1,7 +1,7 @@
 // include my model for this application
 var mongoModel = require("../models/mongoModel.js");
 var AWSModel = require("../models/awsModel.js");
-AWSModel.get_keys();
+
 // Define the routes for this controller
 exports.init = function(app) {
   app.get('/api/:collection', doRetrieve); // CRUD Retrieve
