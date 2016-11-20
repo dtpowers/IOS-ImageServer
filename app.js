@@ -8,8 +8,13 @@ var app = express();
 // Define how to log events
 app.use(morgan('tiny'));
 app.use(bodyParser.urlencoded({
+  limit: '50mb',
+  parameterLimit: 1000000, // experiment with this parameter and tweak
   extended: true
 }));
+
+app.engine('html', require('ejs').renderFile)
+app.set('view engine', 'ejs')
 
 //initialize AWS connection
 
