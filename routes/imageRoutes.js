@@ -1,7 +1,7 @@
 // include my model for this application
 var mongoModel = require("../models/mongoModel.js");
 var AWSModel = require("../models/awsModel.js");
-
+var fs = require('fs');
 // Define the routes for this controller
 exports.init = function(app) {
   app.get('/api/db/:collection', doRetrieve); // CRUD Retrieve
@@ -25,8 +25,19 @@ home = function(req, res) {
 
 
 getImage = function(req, res) {
-  var imageData = "";
+  //imageData = "";
   console.log(req.body.filename);
+  b64string = req.body.imageData;
+  fs.writeFile("pictures/test.txt", b64string, function(err) {
+    console.log("itxt saved!");
+  });
+  fs.writeFile("pictures/test.jpeg", new Buffer(b64string, "base64"), function(err) {
+    console.log("image saved!");
+    res.send("hi Max");
+  });
+
+
+  //res.send("hi Max");
 
 }
 
