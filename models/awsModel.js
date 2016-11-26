@@ -75,17 +75,18 @@ function get_data_from_file(location) {
     }
     image_decode_test(data);
 
-    console.log(data);
+
   });
 
 
 }
 
 function image_decode_test(data) {
-  heading = "data:image/jpeg;base64,";
-  data = heading + data;
-  console.log(data);
-  fs.writeFile("pictures/plzwork.jpeg", new Buffer(data, "base64"), function(err) {
+
+  fs.writeFile("pictures/output.txt", data, function(err) {
+    console.log("itxt saved!");
+  });
+  fs.writeFile("pictures/plzwork.jpg", data, 'base64', function(err) {
     console.log("image saved!");
   });
 
