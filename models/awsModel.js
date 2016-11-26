@@ -66,6 +66,33 @@ function download_test(imageName) {
   );
 }
 
+get_data_from_file('pictures/test1.txt');
+
+function get_data_from_file(location) {
+  fs.readFile(location, 'utf8', function(err, data) {
+    if (err) {
+      return console.log(err);
+    }
+    image_decode_test(data);
+
+    console.log(data);
+  });
+
+
+}
+
+function image_decode_test(data) {
+  heading = "data:image/jpeg;base64,";
+  data = heading + data;
+  console.log(data);
+  fs.writeFile("pictures/plzwork.jpeg", new Buffer(data, "base64"), function(err) {
+    console.log("image saved!");
+  });
+
+
+
+}
+
 
 
 
