@@ -1,0 +1,18 @@
+-apiv1/upload
+    -Photo
+    -Long/lat
+    -caption
+    -user/id
+
+
+
+-apiv1/local_feed
+----Submit location in request
+----Return a List image objects NOT already send to device
+--------Image
+------------photo, long/lat, caption, 
+
+
+
+-apiv1/vote
+----photo_id, vote status
