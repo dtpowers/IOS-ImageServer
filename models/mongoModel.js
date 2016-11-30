@@ -14,7 +14,7 @@ MongoClient.connect(mongo_url, function(err, db) {
 });
 
 
-
+//
 
 exports.create = function(collection, data, callback) {
   console.log("4. Start insert function in mongoModel");
