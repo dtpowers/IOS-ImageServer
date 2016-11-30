@@ -19,8 +19,7 @@ exports.init = function(app) {
 }
 
 home = function(req, res) {
-  res.send("home");
-
+  res.send("The app is working in deploy!");
 }
 
 

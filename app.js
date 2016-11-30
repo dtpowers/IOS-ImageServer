@@ -27,7 +27,7 @@ fs.readdirSync('./routes').forEach(function(file) {
   }
 });
 
-
-app.listen(3000, function() {
-  console.log('THATS A SPICY MEATBALL');
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
+  console.log('Droplet API all ready to go on port ' + port);
 });

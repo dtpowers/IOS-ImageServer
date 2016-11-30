@@ -10,7 +10,7 @@
 ----Submit location in request
 ----Return a List image objects NOT already send to device
 --------Image
-------------photo, long/lat, caption, 
+------------photo, long/lat, caption 
 
 
 

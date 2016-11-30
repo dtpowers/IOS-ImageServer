@@ -3,8 +3,10 @@ var MongoClient = require('mongodb').MongoClient;
 
 var assert = require('assert');
 // Connect to the db
+//var "mongodb://localhost:27017/drop"
+var mongo_url = 'mongodb://heroku_xmw8jw3w:34djcljgm0e2ri740bq3vtjl2v@ds041536.mlab.com:41536/heroku_xmw8jw3w';
 var mongoDB;
-MongoClient.connect("mongodb://localhost:27017/drop", function(err, db) {
+MongoClient.connect(mongo_url, function(err, db) {
   assert.equal(null, err);
   console.log("Connected to MongoDB");
   // assign db to global
