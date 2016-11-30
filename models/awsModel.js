@@ -17,7 +17,7 @@ console.log("AWS config succesful");
 
 //upload_test('pictures/fire.jpg');
 
-function upload_test(file) {
+function upload(file) {
 
 
   // call S3 to retrieve upload file to specified bucket
@@ -37,9 +37,11 @@ function upload_test(file) {
   s3.upload(uploadParams, function(err, data) {
     if (err) {
       console.log("Error", err);
+      return "error";
     }
     if (data) {
       console.log("Upload Success", data.Location);
+      return data.location;
     }
   });
 
@@ -48,7 +50,7 @@ function upload_test(file) {
 
 //download_test("fire.jpg");
 
-function download_test(imageName) {
+function download(imageName) {
 
   s3.getObject({
       Bucket: bucketName,
