@@ -12,7 +12,7 @@ exports.init = function(app) {
 
   app.delete('/api/db/:collection', doDelete); //CRUD Delete
 
-  app.post('/api/image', getImage);
+  app.post('/apiv1/upload', getImage);
 
   app.get('/', home);
 
